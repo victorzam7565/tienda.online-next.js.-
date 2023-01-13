@@ -1,5 +1,14 @@
-import '../styles/globals.css'
+import { useState } from "react";
+import StateWrapper from "../components/stateWrapper";
+import ShoppingCart from "../components/shoppingCart";
+import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <StateWrapper>
+      <Component {...pageProps} />
+    </StateWrapper>
+  );
 }
+
+export default MyApp;
